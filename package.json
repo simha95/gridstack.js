@@ -9,7 +9,9 @@
   },
   "scripts": {
     "build": "grunt",
-    "test": "karma start karma.conf.js"
+    "test": "karma start karma.conf.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [
     "gridstack",
@@ -27,7 +29,8 @@
   "dependencies": {
     "jquery": "^3.1.0",
     "jquery-ui": "^1.12.0",
-    "lodash": "^4.14.2"
+    "lodash": "^4.14.2",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "connect": "^3.4.1",
@@ -54,5 +57,6 @@
     "karma-phantomjs-launcher": "^1.0.0",
     "phantomjs-prebuilt": "^2.1.5",
     "serve-static": "^1.10.2"
-  }
+  },
+  "snyk": true
 }
